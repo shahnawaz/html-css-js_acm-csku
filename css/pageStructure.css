@@ -1,0 +1,90 @@
+/* Light Theme
+#e5e5e5     greyish white
+#999        light grey
+#d64e07     reddish orange
+#04a4cc     blue
+beige
+grey
+*/
+html,body{
+    margin: 0 0 auto auto;
+    width: 100%;
+    height: 100%;
+    background-color: #e5e5e5;
+    font-family: "Arial", sans-serif;
+}
+header,footer{
+    background-color: #999;
+    height: 10%;
+    padding: 1% 10%;
+    color: #e5e5e5;
+}
+header *{
+    margin:0;
+}
+footer{
+    height: 5%;
+}
+footer ul, nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    position: relative;
+    width: 80%;
+    height: 76%;
+    margin: auto;
+    background-color: beige;
+}
+nav {
+    width: 20%;
+    height: 96%;
+    background-color: #04a4cc;
+    padding: 1%;
+    float: left;
+}
+nav ul li{
+    margin: 2px;
+    padding: 20px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+    color: beige;
+    cursor: pointer;
+}
+nav ul li:hover{
+    background-color: #e5e5e5;
+    color: #999;
+}
+.nav-active{
+    background-color: beige;
+    color:grey;
+}
+#main-body{
+    float:left;
+    width: 55%;
+}
+#main-body ul li{
+    display: inline;
+}
+#title{
+    cursor: pointer;
+}
+#title:hover{
+    color: beige;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+aside{
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 23%;
+    height: 100%;
+    background-color: #04a4cc;
+    word-wrap: break-word;
+    overflow-y: scroll;
+}

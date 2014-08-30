@@ -5,22 +5,56 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<nav class="navbar">
-    <div class="container">
-        <ul class="navbar-elements">
-            <li><a>Home</a></li>
-            <li><a>About</a></li>
-            <li><a>Features</a></li>
-            <li><a>Contact us</a></li>
-        </ul>
-    </div>
-</nav>
-<div class="container">
-    <div class="content-body">
 
+<header>
+    <h1 id="title" onclick="gotoHome()">HTML-CSS-JS</h1>
+    <h4>That's how we do it..</h4>
+</header>
+
+<div class="container">
+    <nav>
+        <ul class="navbar-elements">
+            <li class="nav-tab" id='nav-appliances' onclick="AppModule.tabChange('nav-appliances')">Appliances</li>
+            <li class="nav-tab" id='nav-cell-phones' onclick="AppModule.tabChange('nav-cell-phones')">Cell Phones</li>
+            <li class="nav-tab" id='nav-cameras' onclick="AppModule.tabChange('nav-cameras')">Cameras</li>
+            <li class="nav-tab" id='nav-video-games' onclick="AppModule.tabChange('nav-video-games')">Video Games</li>
+            <li class="nav-tab" id='nav-wearable-tech' onclick="AppModule.tabChange('nav-wearable-tech')">Wearable Technology</li>
+        </ul>
+    </nav>
+    <div role="main" id="main-body">
+        <h3>Welcome!</h3>
+        <p>This is a simple shopping cart web application to explain the basic utilization of HTML5, CSS3 and JavaScript to students</p>
+        <div class="main-screen-img">
+            <div class="main-img">
+                <img src="img/html5_logo.png" alt="HTML5" width="180" height="180">
+            </div>
+            <div class="main-img">
+                <img src="img/css3_logo.png" alt="CSS3" width="180" height="180">
+            </div>
+            <div class="main-img">
+                <img src="img/js_logo.png" alt="JavaScript" width="180" height="180">
+            </div>
+        </div>
     </div>
+    <aside>
+        <div id="cart-price">
+        </div>
+        <div id="cart-items"></div>
+    </aside>
 </div>
 
-<script src="js/script.js"></script>
+<footer>
+    <ul>
+        <li>Copyright &copy; 2014, ACM-CSKU., All rights reserved</li>
+    </ul>
+</footer>
+
+<script src="js/appModule.js"></script>
+<script src="js/appData.js"></script>
+<script>
+    function gotoHome(){
+        window.location.reload();
+    }
+</script>
 </body>
 </html>
