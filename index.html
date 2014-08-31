@@ -3,6 +3,8 @@
 <head>
     <title>HTML-CSS-JS [ACM-CSKU]</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/appModule.js"></script>
+    <script src="js/appData.js"></script>
 </head>
 <body>
 
@@ -39,7 +41,7 @@
     <aside>
         <div id="cart-price">
         </div>
-        <div id="cart-items"></div>
+        <div id="cart-items"><table id="cart-items-table"></table></div>
     </aside>
 </div>
 
@@ -48,12 +50,16 @@
         <li>Copyright &copy; 2014, ACM-CSKU., All rights reserved</li>
     </ul>
 </footer>
+<!--
 
 <script src="js/appModule.js"></script>
 <script src="js/appData.js"></script>
+-->
 <script>
     function gotoHome(){
+        //AppModule.loadItems();
         window.location.reload();
+
     }
 </script>
 </body>

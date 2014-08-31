@@ -82,9 +82,25 @@ aside{
     position: absolute;
     top: 0;
     right:0;
-    width: 23%;
+    width: 25%;
     height: 100%;
     background-color: #04a4cc;
     word-wrap: break-word;
     overflow-y: scroll;
+}
+
+#cart-items #cart-items-table {
+    background-color: white;
+    border-radius: 10px;
+    margin: 6px 10px;
+    width: 92%;
+    padding: 5px 5px;
+}
+
+#cart-items #cart-items-table .name-column {
+    width:75%;
+}
+#cart-items #cart-items-table .price-column {
+    text-align: right;
+    padding-right: 5px;
 }
