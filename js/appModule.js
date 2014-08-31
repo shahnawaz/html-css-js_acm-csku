@@ -84,48 +84,25 @@ var AppModule = {
         }
         this.updateCart("cart-items",index);
         this.updatePrice("cart-price");
-        //console.log(AppModule.selectedItems);
     },
 
-    insertAnItem: function(item,table){
-        var newrow = table.insertRow(table.rows.length);
-        newrow.insertCell(0).innerHTML = item.name;
-        newrow.insertCell(0).innerHTML = "Rs." ;
-        newrow.insertCell(0).innerHTML = item.price;
-    },
 
     updateCart : function(itemCartId,index){
         AppModule.loadItems();
-        //var selectedItemsHtml = "";
-        /*for(obj in AppModule.data){
-	     AppModule.data[obj].forEach(function(item){
-	     AppModule.selectedItems.forEach(function(id){
-	     if(item.id == id){
-	     selectedItemsHtml += "<li class='cartItems'>"+item.name+ "<span style='float:right'>- Rs ";
-	     switch(true){
-	     case (item.price < 10):
-	     selectedItemsHtml += " &nbsp &nbsp";
-	     break;
-
-	     case (item.price < 100):
-	     selectedItemsHtml += " &nbsp";
-	     break;
-	     }
-
-	     selectedItemsHtml += item.price + "</span></li>";
-	     }
-	     })
-	     })
-	     }*/
 
         var table = document.getElementById("cart-items-table");
+        // if the index is undefined this means no item has been removed only an item has been added.
         if (index == undefined){
+            // from All_Items Object of AppModule select the item which has same Item_id as our latest selected_Item.
             var selectedItem = AppModule.allItems[AppModule.selectedItems[AppModule.selectedItems.length-1]];
-            console.log(selectedItem);
+            // Add a new row in table
             var newRow = table.insertRow(table.rows.length);
             newRow.width = "100%";
             newRow.setAttribute("data-item",selectedItem.id);
+            // format data for new row, this technique comes from python
             var data = [selectedItem.name,"Rs",selectedItem.price];
+
+            // adding cells in newly created row
             for( var cell= 0 ; cell <3; cell++){
                 var tempCell = newRow.insertCell(cell);
                 tempCell.innerHTML = data[cell];
@@ -136,7 +113,8 @@ var AppModule = {
                 }
 
             }
-        } else {
+        } // if no new item has been added then there must be an item deleted and its index must have been passed
+        else {
             table.deleteRow(index);
         }
     },
